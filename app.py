@@ -44,7 +44,6 @@ def addpost():
     content = request.form['content']
 
     post = Blogpost(title=title, subtitle=subtitle, author=author, content=content, date_posted=datetime.now())
-
     db.session.add(post)
     db.session.commit()
 
